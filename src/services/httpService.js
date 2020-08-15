@@ -2,6 +2,9 @@ import axios from "axios";
 import logger from "./logService";
 import { toast } from "react-toastify";
 
+//axios.defaults.baseURL=process.env.REACT_APP_API_URL;
+axios.defaults.baseURL="https://charan-movies-project1.herokuapp.com/api";
+//axios.defaults.baseURL="https://intense-citadel-32029.herokuapp.com/api"
 axios.interceptors.response.use(null, error => {
   const expectedError =
     error.response &&

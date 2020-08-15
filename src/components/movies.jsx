@@ -24,7 +24,9 @@ class Movies extends Component {
     const {data}= await getGenres();
     const genres=[{_id:'',name:'All genres'}, ...data];
     const {data:movies}=await getMovies();
+    //console.log(data,movies);
     this.setState({ genres,movies })
+    //console.log(this.state);
   };
 
   handleDelete =async (movie) => {
@@ -86,7 +88,7 @@ class Movies extends Component {
     const { user }=this.props;
     //if (count === 0) return <p>There are No movies in databases</p>;
     const {totalCount,data:movies}=this.getpagedData();
-
+    
     return (
       <React.Fragment>
       
